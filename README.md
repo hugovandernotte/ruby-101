@@ -26,24 +26,12 @@ Everything in Ruby is an object. Objects have in-build methods you can call on t
 - Defined with single quotes or double quotes: `'wagon'` or `"wagon"`
 
 ```ruby
-"wagon".class        # => String
-"wagon".upcase       # => "WAGON"
-"wagon".capitalize   # => "Wagon"
-```
 
-- You can inject Ruby code into a string using interpolation, but in double-quoted strings
+puts "wagon"              # => "wagon"
+puts "Hey" + " Le Wagon"  # => "Hey Le Wagon"
 
-```ruby
-'two: #{1 + 1}'      # => "two: #{1 + 1}"
-"two: #{1 + 1}"      # => "two: 2"
-```
-
-- You can convert strings to numbers
-
-```ruby
-'1984'.class         # => String
-'1984'.to_i          # => 1984
-'1984'.to_i.class    # => Fixnum
+puts "wagon".upcase       # => "WAGON"
+puts "wagon".capitalize   # => "Wagon"
 ```
 
 ### Integers
@@ -52,54 +40,27 @@ Everything in Ruby is an object. Objects have in-build methods you can call on t
 - Can do standard arithmetic
 
 ```ruby
-4.class              # => Integer
-1 + 2                # => 3
-2 * 4                # => 6
+puts 1 + 2                # => 3
+puts 2 * 4                # => 6
 ```
 
 - Also has custom methods built-in
 
 ```ruby
-20.even?             # => true
-20.odd?              # => false
-```
-
-- You can convert numbers to strings
-
-```ruby
-1984.to_s          # => "1984"
-```
-
-### Floats
-
-- To represent decimal numbers
-
-```ruby
-3.14.class         # => Float
-1.23 + 2.1         # => 3.33
-```
-
-- Has it's own built-in methods
-
-```ruby
-3.14.round         # => 3
+puts 20.even?             # => true
+puts 20.odd?              # => false
 ```
 
 ### Arrays
 
 - To represent list of elements, usually of the same type
 - Defined with square brackets around the list of items
-
-```ruby
-["paris", "london", "new york"].class     # => Array
-[2, 5, 8, 2].class                        # => Array
-```
 - Has it's own built-in methods
 
 ```ruby
-["paris", "london", "new york"].length    # => 3
-["paris", "london", "new york"].sort      # => ["london", "new york", "paris"]
-[3, 5, 1].sort                            # => [1, 3, 5]
+puts ["paris", "london", "new york"].length    # => 3
+p ["paris", "london", "new york"].sort      # => ["london", "new york", "paris"]
+puts [3, 5, 1].sort                            # => [1, 3, 5]
 ```
 
 - You access elements in an array based on its **index**, careful, indexes start at 0
@@ -107,8 +68,8 @@ Everything in Ruby is an object. Objects have in-build methods you can call on t
 ```ruby
 beatles = ["john", "paul", "george", "ringo"]
 
-beatles[0]         # => "john"
-beatles[2]         # => "george"
+puts beatles[0]         # => "john"
+puts beatles[2]         # => "george"
 ```
 
 - You add an element to an array by **appending** it or **inserting** it at a given **index**
@@ -145,8 +106,8 @@ p beatles          # => ["john", "paul", "george", "ringo"]
 - To represent something that is true or false
 
 ```ruby
-1 > 2 # => false
-2 > 1 # => true
+puts 1 > 2 # => false
+puts 2 > 1 # => true
 ```
 
 ### Built-in methods
@@ -168,21 +129,9 @@ The built in methods are well-documented, don't reinvent the wheel...
 
 ```ruby
 age = 21
-puts "You are #{age} years old"
+puts age # => 21
 
-age = age + 1
-puts "You are now #{age}"
 ```
-
-```ruby
-first_name = "Alex"
-last_name = "Benoit"
-
-puts "My name is #{first_name} #{last_name}"
-```
-
-- By convention, variable names should be in snake_case (lowercase with underscores)
-
 
 ## Methods
 
@@ -193,24 +142,15 @@ puts "My name is #{first_name} #{last_name}"
 
 ```ruby
 def full_name(first_name, last_name)
-  name = "#{first_name.capitalize} #{last_name.capitalize}"
+  name = first_name.capitalize + " " + last_name.capitalize
   return name
 end
 
-puts full_name("boris", "paillard")
+puts full_name("charly", "martin")
 ```
 
 - In the example above, `first_name` and `last_name` were parameters and `"boris"` and `"paillard"` were the arguments, and we `puts` what returned from the method call
 - We can call the method with variables too
-
-```ruby
-my_first_name = "alex"
-my_last_name = "benoit"
-puts full_name(my_first_name, my_last_name)
-```
-
-- By convention, method names should be in snake_case (lowercase with underscores)
-- By convention, methods ending with `?` such as `even?` and `start_with?` return a Boolean
 
 ## Flow Control
 
@@ -225,16 +165,6 @@ If conditionals allow us to execute a certain chunk of code if a condition is "t
 ```ruby
 if condition
   # code executed only when condition is "truthy"
-end
-```
-
-#### Unless
-
-Unless conditionals allow us to execute a certain chunk of code if a condition is **not** "thruthy".
-
-```ruby
-unless condition
-  # code executed only when condition is not "truthy"
 end
 ```
 
@@ -253,44 +183,12 @@ end
 For example, a small Ruby program that checks if you are old enough to vote:
 
 ```ruby
-puts "How old are you?"
-age = gets.chomp.to_i
+age = 20
 
 if age >= 18
   puts "You can vote!"
 else
   puts "You cannot vote!"
-end
-```
-
-#### If/Elsif/Else
-
-You can have more that one condition in If/Elsif/.../Else conditionals.
-
-```ruby
-if first_condition
-  # code executed only if first condition is "truthy"
-elsif second_condition
-  # code executed only if second_condition is "truthy" and first_condition is not "truthy"
-elsif third_condition
-  # ...
-else
-  # code executed if no conditions are "truthy"
-end
-```
-
-For example, a small Ruby program that greets you depending on the hour of the day:
-
-```ruby
-puts "What time is it?"
-hour = gets.chomp.to_i
-
-if hour < 12
-  puts "Good morning!"
-elsif hour >= 12 && hour < 20
-  puts "Good afternoon!"
-else
-  puts "Good night!"
 end
 ```
 
@@ -314,26 +212,12 @@ end
 For example, a small Ruby program that replicates the 'Price is Right' game.
 
 ```ruby
-price_to_find = 1 + rand(5)
-choice = nil
+counter = 1
 
-while (choice != price_to_find)
-  puts "How much (between 1 and 5)?"
-  choice = gets.chomp.to_i
+while counter < 6
+  puts counter
 end
 
-puts "You won!"
-```
-
-#### Until
-
-Until loops allow us to execute a chunk of code multiple times while a condition is **not** "truthy".
-
-
-```ruby
-until condition
-  # executed until condition is truthy
-end
 ```
 
 #### For
