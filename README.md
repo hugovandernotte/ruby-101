@@ -140,77 +140,13 @@ beatles.delete("arthur")
 p beatles          # => ["john", "paul", "george", "ringo"]
 ```
 
-### Ranges
-
-- To represent ranges of elements (usually numbers)
-- Defined with `..` between two elements and brackets, `...` to exclude the last element from the range
-
-```ruby
-(1..5).class       # => Range
-(1..5).to_a        # => [1, 2, 3, 4, 5]
-(1...5).to_a       # => [1, 2, 3, 4]
-("a".."e").to_a    # => ["a", "b", "c", "d", "e"]
-```
-
 ### Booleans
 
 - To represent something that is true or false
 
-### Hashes
-
-- To represent a dictionary-like collection of unique **keys** and associated **values** (think word => definition).
-- Defined with curly brackets and hash rockets between keys and values
-
 ```ruby
-{ "peter" => 24, "mary" => 25, "george" => 22, "emma" => 20 }
-```
-
-- Has it's own built-in methods
-
-```ruby
-capitals = {"france" => "paris", "united kingdom" => "london", "spain" => "madrid" }
-
-capitals.has_key?("france")               # => true
-capitals.keys                             # => ["france", "united kingdom", "spain"]
-capitals.values                           # => ["paris", "london", "madrid"]
-capitals.length                           # => 3
-```
-
-- You access a **value** in a hash using its unique **key**
-
-```ruby
-capitals = {"france" => "paris", "united kingdom" => "london", "spain" => "madrid" }
-
-capitals["france"] # => "paris"
-capitals["spain"]  # => "madrid"
-
-```
-
-- You add a **key/value pair** to a hash by indicating the new unique key and value
-
-```ruby
-capitals = {"france" => "paris", "united kingdom" => "london", "spain" => "madrid" }
-
-capitals["germany"] = "berlin"
-p capitals         # => { "france"=>"paris", "united kingdom"=>"london", "spain"=>"madrid", "germany"=>"berlin"}
-```
-
-- You modify/update a **value** in a hash using its unique **key**
-
-```ruby
-capitals = {"france" => "paris", "united kingdom" => "bristol", "spain" => "madrid" }
-
-capitals["united kingdom"] = "bristol"
-p capitals         # => { "france"=>"paris", "united kingdom"=>"london", "spain"=>"madrid" }
-```
-
-- You delete a key/value pair from a hash using its unique key
-
-```ruby
-capitals = {"france" => "paris", "united kingdom" => "bristol", "spain" => "madrid" }
-
-capitals.delete("spain")
-p capitals         # => { "france"=>"paris", "united kingdom"=>"london" }
+1 > 2 # => false
+2 > 1 # => true
 ```
 
 ### Built-in methods
