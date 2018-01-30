@@ -309,13 +309,13 @@ array_of_cities = [“Paris”, “London”, “Melbourne”, “Tokyo”]
 
 ```
 
-Print out the third value of this array.
+- Print out the third value of this array.
 
-Add Sydney to this array and print out the new array.
+- Add Sydney to this array and print out the new array.
 
-Delete Melbourne from it a,nd print out the new array.
+- Delete Melbourne from it a,nd print out the new array.
 
-You should see something like that:
+- You should see something like that:
 
 ```bash
 Melbourne
@@ -338,7 +338,7 @@ It will store the current hour in a variable named current_hour. Now create an i
 You should see something like this:
 
 ```bash
-I am hungry!
+I am hungry\!
 ````
 
 ### Challenge 6
@@ -349,7 +349,7 @@ Copy paste this:
 students = ["Julie", "Ben", "Beatrice"]
 ```
 
-Combine a for loop and if statement inside to print out all names that starts with a “B”.
+Combine a for loop and a if statement inside to print out all names that starts with a “B”.
 
 You should see something like this:
 
