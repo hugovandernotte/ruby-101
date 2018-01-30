@@ -246,3 +246,36 @@ end
 ```
 
 In the example above, the for loop will loop 5 times, with num being equal to the corresponding element in the array on each loop.
+
+# Challenges
+
+### Challenge 1
+
+Print out the numbers 1 to 8 using a for loop
+
+You should see something like that:
+
+```bash
+   1
+   2
+   3
+   4
+   5
+   6
+   7
+   8
+````
+
+
+
+### Challenge 2
+
+### Challenge 3
+
+### Challenge 4
+
+### Challenge 5
+
+### Challenge 6
+
+### Challenge 7
