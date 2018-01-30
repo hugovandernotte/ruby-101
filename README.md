@@ -1,6 +1,17 @@
 # Ruby 101
 
-Ruby is a dynamic programming language with a focus on simplicity and productivity. It has an elegant syntax that is natural to read and easy to write.
+Ruby is what we called a programming language.
+
+It has the particularity to be focused on simplicity and productivity by using an elegant syntax that is natural to read and easy to write.
+
+## Objectives
+
+- Describe variables and data types
+
+- Define & write a function
+
+- Identify conditions and loops
+
 
 ## How to run Ruby code
 
@@ -16,9 +27,12 @@ Ruby is a dynamic programming language with a focus on simplicity and productivi
    ruby path/to/your/file.rb
    ````
 
-## Built-in Ruby Objects
 
-Everything in Ruby is an object. Objects have in-build methods you can call on them.
+3. Using online Ruby interpreter
+
+    You can go on https://repl.it/ to ger a Ruby interpreter without having to download anything.
+
+# Ruby types
 
 ### Strings
 
@@ -27,11 +41,11 @@ Everything in Ruby is an object. Objects have in-build methods you can call on t
 
 ```ruby
 
-puts "wagon"              # => "wagon"
-puts "Hey" + " Le Wagon"  # => "Hey Le Wagon"
+"wagon"              # => "wagon"
+"Hey" + " Le Wagon"  # => "Hey Le Wagon"
 
-puts "wagon".upcase       # => "WAGON"
-puts "wagon".capitalize   # => "Wagon"
+"wagon".upcase       # => "WAGON"
+"wagon".capitalize   # => "Wagon"
 ```
 
 ### Integers
@@ -40,15 +54,15 @@ puts "wagon".capitalize   # => "Wagon"
 - Can do standard arithmetic
 
 ```ruby
-puts 1 + 2                # => 3
-puts 2 * 4                # => 6
+1 + 2                # => 3
+2 * 4                # => 6
 ```
 
 - Also has custom methods built-in
 
 ```ruby
-puts 20.even?             # => true
-puts 20.odd?              # => false
+20.even?             # => true
+20.odd?              # => false
 ```
 
 ### Arrays
@@ -58,9 +72,9 @@ puts 20.odd?              # => false
 - Has it's own built-in methods
 
 ```ruby
-puts ["paris", "london", "new york"].length    # => 3
+["paris", "london", "new york"].length    # => 3
 p ["paris", "london", "new york"].sort      # => ["london", "new york", "paris"]
-puts [3, 5, 1].sort                            # => [1, 3, 5]
+[3, 5, 1].sort                            # => [1, 3, 5]
 ```
 
 - You access elements in an array based on its **index**, careful, indexes start at 0
@@ -68,8 +82,8 @@ puts [3, 5, 1].sort                            # => [1, 3, 5]
 ```ruby
 beatles = ["john", "paul", "george", "ringo"]
 
-puts beatles[0]         # => "john"
-puts beatles[2]         # => "george"
+beatles[0]         # => "john"
+beatles[2]         # => "george"
 ```
 
 - You add an element to an array by **appending** it or **inserting** it at a given **index**
@@ -106,8 +120,8 @@ p beatles          # => ["john", "paul", "george", "ringo"]
 - To represent something that is true or false
 
 ```ruby
-puts 1 > 2 # => false
-puts 2 > 1 # => true
+1 > 2 # => false
+2 > 1 # => true
 ```
 
 ### Built-in methods
@@ -129,7 +143,7 @@ The built in methods are well-documented, don't reinvent the wheel...
 
 ```ruby
 age = 21
-puts age # => 21
+age # => 21
 
 ```
 
@@ -141,12 +155,12 @@ puts age # => 21
 - A method always returns a result, and you can then operate on what is returned
 
 ```ruby
-def full_name(first_name, last_name)
-  name = first_name.capitalize + " " + last_name.capitalize
-  return name
+def say_hi(first_name)
+  sentence = "Hey " + first_name.capitalize + "!"
+  return sentence
 end
 
-puts full_name("charly", "martin")
+puts say_hi("charly") # => "Hey Charly!"
 ```
 
 - In the example above, `first_name` and `last_name` were parameters and `"boris"` and `"paillard"` were the arguments, and we `puts` what returned from the method call
@@ -216,6 +230,7 @@ counter = 1
 
 while counter < 6
   puts counter
+  counter = counter + 1
 end
 
 ```
