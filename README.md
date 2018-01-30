@@ -30,7 +30,7 @@ It has the particularity to be focused on simplicity and productivity by using a
 
 3. Using online Ruby interpreter
 
-    You can go on https://repl.it/ to ger a Ruby interpreter without having to download anything.
+    You can go on https://repl.it/ to get a Ruby interpreter without having to download anything.
 
 # Ruby types
 
@@ -41,11 +41,11 @@ It has the particularity to be focused on simplicity and productivity by using a
 
 ```ruby
 
-"wagon"              # => "wagon"
-"Hey" + " Le Wagon"  # => "Hey Le Wagon"
+puts "wagon"              # => wagon
+puts "Hey" + " Le Wagon"  # => Hey Le Wagon
 
-"wagon".upcase       # => "WAGON"
-"wagon".capitalize   # => "Wagon"
+puts "wagon".upcase       # => WAGON
+puts "wagon".capitalize   # => Wagon
 ```
 
 ### Integers
@@ -54,15 +54,27 @@ It has the particularity to be focused on simplicity and productivity by using a
 - Can do standard arithmetic
 
 ```ruby
-1 + 2                # => 3
-2 * 4                # => 6
+puts 1 + 2                # => 3
+puts 2 * 4                # => 8
 ```
 
 - Also has custom methods built-in
 
 ```ruby
-20.even?             # => true
-20.odd?              # => false
+puts 20.even?             # => true
+puts 20.odd?              # => false
+```
+
+## Variables
+
+- Allows you to store values to reuse them later
+- You **assign** a value to a variables
+- Variables can be overwritten and incremented
+
+```ruby
+age = 21
+puts age # => 21
+
 ```
 
 ### Arrays
@@ -72,9 +84,9 @@ It has the particularity to be focused on simplicity and productivity by using a
 - Has it's own built-in methods
 
 ```ruby
-["paris", "london", "new york"].length    # => 3
-p ["paris", "london", "new york"].sort      # => ["london", "new york", "paris"]
-[3, 5, 1].sort                            # => [1, 3, 5]
+puts ["paris", "london", "new york"].length    # => 3
+puts ["paris", "london", "new york"].sort      # => london new york paris
+puts [3, 5, 1].sort                            # => 1 3 5
 ```
 
 - You access elements in an array based on its **index**, careful, indexes start at 0
@@ -82,8 +94,8 @@ p ["paris", "london", "new york"].sort      # => ["london", "new york", "paris"]
 ```ruby
 beatles = ["john", "paul", "george", "ringo"]
 
-beatles[0]         # => "john"
-beatles[2]         # => "george"
+puts beatles[0]         # => john
+puts beatles[2]         # => george
 ```
 
 - You add an element to an array by **appending** it or **inserting** it at a given **index**
@@ -93,7 +105,7 @@ beatles = ["john", "george"]
 
 beatles << "ringo"
 beatles.insert(1, "paul")
-p beatles          # => ["john", "paul", "george", "ringo"]
+puts beatles          # => john paul george ringo
 ```
 
 - You modify an element in an array using its **index** again
@@ -102,7 +114,7 @@ p beatles          # => ["john", "paul", "george", "ringo"]
 beatles = ["john", "alex", "george", "ringo"]
 
 beatles[1] = "paul"
-p beatles          # => ["john", "paul", "george", "ringo"]
+puts beatles          # => john paul george ringo
 ```
 
 - You delete an element from an array by using its **index** or by using its value
@@ -112,7 +124,7 @@ beatles = ["john", "paul", "alex", "george", "arthur", "ringo"]
 
 beatles.delete_at(2)
 beatles.delete("arthur")
-p beatles          # => ["john", "paul", "george", "ringo"]
+puts beatles          # => john paul george ringo
 ```
 
 ### Booleans
@@ -120,8 +132,8 @@ p beatles          # => ["john", "paul", "george", "ringo"]
 - To represent something that is true or false
 
 ```ruby
-1 > 2 # => false
-2 > 1 # => true
+puts 1 > 2 # => false
+puts 2 > 1 # => true
 ```
 
 ### Built-in methods
@@ -134,18 +146,6 @@ The built in methods are well-documented, don't reinvent the wheel...
 - [Array methods](https://ruby-doc.org/core-2.3.3/Array.html)
 - [Hash methods](https://ruby-doc.org/core-2.3.3/Hash.html)
 - [Enumerable methods](https://ruby-doc.org/core-2.3.3/Enumerable.html)
-
-## Variables
-
-- Allows you to store values to reuse them later
-- You **assign** a value to a variables
-- Variables can be overwritten and incremented
-
-```ruby
-age = 21
-age # => 21
-
-```
 
 ## Methods
 
@@ -160,7 +160,7 @@ def say_hi(first_name)
   return sentence
 end
 
-puts say_hi("charly") # => "Hey Charly!"
+puts say_hi("charly") # => Hey Charly!
 ```
 
 - In the example above, `first_name` and `last_name` were parameters and `"boris"` and `"paillard"` were the arguments, and we `puts` what returned from the method call
