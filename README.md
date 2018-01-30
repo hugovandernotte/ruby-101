@@ -338,7 +338,7 @@ It will store the current hour in a variable named current_hour. Now create an i
 You should see something like this:
 
 ```bash
-I am hungry\!
+I am hungry!
 ````
 
 ### Challenge 6
