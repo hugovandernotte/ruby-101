@@ -85,8 +85,8 @@ puts age # => 21
 
 ```ruby
 puts ["paris", "london", "new york"].length    # => 3
-puts ["paris", "london", "new york"].sort      # => london new york paris
-puts [3, 5, 1].sort                            # => 1 3 5
+p ["paris", "london", "new york"].sort      # => ["london", "new york", "paris"]
+p [3, 5, 1].sort                            # => [1, 3, 5]
 ```
 
 - You access elements in an array based on its **index**, careful, indexes start at 0
@@ -105,7 +105,7 @@ beatles = ["john", "george"]
 
 beatles << "ringo"
 beatles.insert(1, "paul")
-puts beatles          # => john paul george ringo
+p beatles          # => ["john", "paul", "george", "ringo"]
 ```
 
 - You modify an element in an array using its **index** again
@@ -114,7 +114,7 @@ puts beatles          # => john paul george ringo
 beatles = ["john", "alex", "george", "ringo"]
 
 beatles[1] = "paul"
-puts beatles          # => john paul george ringo
+p beatles          # => ["john", "paul", "george", "ringo"]
 ```
 
 - You delete an element from an array by using its **index** or by using its value
@@ -124,7 +124,7 @@ beatles = ["john", "paul", "alex", "george", "arthur", "ringo"]
 
 beatles.delete_at(2)
 beatles.delete("arthur")
-puts beatles          # => john paul george ringo
+p beatles          # => ["john", "paul", "george", "ringo"]
 ```
 
 ### Booleans
@@ -241,7 +241,7 @@ For loops allow us to execute a chunk of code for a given amount of times, based
 
 ```ruby
 for num in [1, 2, 3, 4, 5]
-  puts num
+  puts "Hey"
 end
 ```
 
@@ -251,7 +251,7 @@ In the example above, the for loop will loop 5 times, with num being equal to th
 
 ### Challenge 1
 
-Print out the numbers 1 to 8 using a for loop
+Print out the numbers 1 to 8 using a for loop.
 
 You should see something like that:
 
@@ -266,16 +266,94 @@ You should see something like that:
    8
 ````
 
-
-
 ### Challenge 2
+
+Print out 5 times “hello” using a while loop.
+
+You should see something like that:
+
+```bash
+  hello
+  hello
+  hello
+  hello
+  hello
+````
 
 ### Challenge 3
 
+Copy paste this:
+
+```ruby
+first_name = “john”
+last_name = “lennon”
+full_name = ???
+
+puts full_name
+
+```
+
+Change the value of full_name to get something like this:
+
+```bash
+John LENNON
+````
+
 ### Challenge 4
+
+Copy paste this:
+
+```ruby
+
+array_of_cities = [“Paris”, “London”, “Melbourne”, “Tokyo”]
+
+```
+
+Print out the third value of this array.
+
+Add Sydney to this array and print out the new array.
+
+Delete Melbourne from it a,nd print out the new array.
+
+You should see something like that:
+
+```bash
+Melbourne
+["Paris", "London", "Tokyo"]
+["Paris", "London", "Tokyo", "Sydney"]
+````
 
 ### Challenge 5
 
+Copy paste this:
+
+```ruby
+
+current_hour = Time.now.hour
+
+```
+
+It will store the current hour in a variable named current_hour. Now create an if statement to puts "I am hungry!" if current_hour is bigger thant 12.
+
+You should see something like this:
+
+```bash
+I am hungry!
+````
+
 ### Challenge 6
 
-### Challenge 7
+Copy paste this:
+
+```ruby
+students = ["Julie", "Ben", "Beatrice"]
+```
+
+Combine a for loop and if statement inside to print out all names that starts with a “B”.
+
+You should see something like this:
+
+```bash
+Ben
+Beatrice
+````
