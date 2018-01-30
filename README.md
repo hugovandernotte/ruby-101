@@ -357,3 +357,27 @@ You should see something like this:
 Ben
 Beatrice
 ````
+
+### Challenge 7
+
+Copy paste this:
+
+```ruby
+<!-- your code here -->
+
+puts only_name_with_first_letter(["Charly", "Cedric", "Hugo"], "C")
+```
+
+Create a function called only_name_with_first_letter that prints all students names that start with a specific letter. The function takes two parameters:
+1) An array of students 2) A letter
+Copy paste this:
+
+You should see something like this:
+
+```bash
+Charly
+Cedric
+````
+
+
+
