@@ -147,25 +147,6 @@ The built in methods are well-documented, don't reinvent the wheel...
 - [Hash methods](https://ruby-doc.org/core-2.3.3/Hash.html)
 - [Enumerable methods](https://ruby-doc.org/core-2.3.3/Enumerable.html)
 
-## Methods
-
-- Concise way to call Ruby code multiple times
-- Apply the ruby code to dynamic inputs
-- Defined with **parameters** and called with **arguments**
-- A method always returns a result, and you can then operate on what is returned
-
-```ruby
-def say_hi(first_name)
-  sentence = "Hey " + first_name.capitalize + "!"
-  return sentence
-end
-
-puts say_hi("charly") # => Hey Charly!
-```
-
-- In the example above, `first_name` and `last_name` were parameters and `"boris"` and `"paillard"` were the arguments, and we `puts` what returned from the method call
-- We can call the method with variables too
-
 ## Flow Control
 
 Conditionals and loops change the flow of a Ruby program. Conditionals allow us to execute a certain chunk of code under a specific condition. Loops allow us to execute a chunk of code multiple times. When the program is run, the code is executed from top to bottom, line by line, which is how you should debug in your head.
@@ -246,6 +227,25 @@ end
 ```
 
 In the example above, the for loop will loop 5 times, with num being equal to the corresponding element in the array on each loop.
+
+## Methods
+
+- Concise way to call Ruby code multiple times
+- Apply the ruby code to dynamic inputs
+- Defined with **parameters** and called with **arguments**
+- A method always returns a result, and you can then operate on what is returned
+
+```ruby
+def say_hi(first_name)
+  sentence = "Hey " + first_name.capitalize + "!"
+  return sentence
+end
+
+puts say_hi("charly") # => Hey Charly!
+```
+
+- In the example above, `first_name` and `last_name` were parameters and `"boris"` and `"paillard"` were the arguments, and we `puts` what returned from the method call
+- We can call the method with variables too
 
 # Challenges
 
