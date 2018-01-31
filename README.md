@@ -313,7 +313,7 @@ array_of_cities = [“Paris”, “London”, “Melbourne”, “Tokyo”]
 
 - Add Sydney to this array and print out the new array.
 
-- Delete Melbourne from it a,nd print out the new array.
+- Delete Melbourne from it and print out the new array.
 
 - You should see something like that:
 
@@ -333,13 +333,9 @@ current_hour = Time.now.hour
 
 ```
 
-It will store the current hour in a variable named current_hour. Now create an if statement to puts "I am hungry!" if current_hour is bigger thant 12.
+It will store the current hour in a variable named current_hour. Now create an if statement to print out "I am hungry!" if current_hour is bigger than 12.
 
-You should see something like this:
-
-```bash
-I am hungry!
-````
+Change the value of current_hour to see if it works.
 
 ### Challenge 6
 
@@ -349,14 +345,7 @@ Copy paste this:
 students = ["Julie", "Ben", "Beatrice"]
 ```
 
-Combine a for loop and a if statement inside to print out all names that starts with a “B”.
-
-You should see something like this:
-
-```bash
-Ben
-Beatrice
-````
+Combine a for loop and an if statement inside of the loop to print out every name that starts with a “B”.
 
 ### Challenge 7
 
@@ -368,7 +357,7 @@ Copy paste this:
 puts only_name_with_first_letter(["Charly", "Cedric", "Hugo"], "C")
 ```
 
-Create a function called only_name_with_first_letter that prints all students names that start with a specific letter. The function takes two parameters:
+Create a function called only_name_with_first_letter that prints out all students names that start with a specific letter. The function takes two parameters:
 1) An array of students 2) A letter
 Copy paste this:
 
