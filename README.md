@@ -8,9 +8,11 @@ It has the particularity to be focused on simplicity and productivity by using a
 
 - Describe variables and data types
 
+- Identify conditions and loops
+
 - Define & write a function
 
-- Identify conditions and loops
+
 
 
 ## How to run Ruby code
