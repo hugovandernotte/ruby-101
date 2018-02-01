@@ -67,16 +67,13 @@ puts 20.even?             # => true
 puts 20.odd?              # => false
 ```
 
-## Variables
+### Booleans
 
-- Allows you to store values to reuse them later
-- You **assign** a value to a variables
-- Variables can be overwritten and incremented
+- To represent something that is true or false
 
 ```ruby
-age = 21
-puts age # => 21
-
+puts 1 > 2 # => false
+puts 2 > 1 # => true
 ```
 
 ### Arrays
@@ -129,14 +126,19 @@ beatles.delete("arthur")
 p beatles          # => ["john", "paul", "george", "ringo"]
 ```
 
-### Booleans
 
-- To represent something that is true or false
+## Variables
+
+- Allows you to store values to reuse them later
+- You **assign** a value to a variables
+- Variables can be overwritten and incremented
 
 ```ruby
-puts 1 > 2 # => false
-puts 2 > 1 # => true
+age = 21
+puts age # => 21
+
 ```
+
 
 ### Built-in methods
 
@@ -268,9 +270,26 @@ You should see something like that:
    8
 ````
 
+Solution:
+
+```ruby
+
+\first solution
+
+for num in [1,2,3,4,5,6,7,8]
+  puts num
+end
+
+
+for num in (1..8).to_a
+  puts num
+end
+
+```
+
 ### Challenge 2
 
-Print out 5 times “hello” using a while loop.
+Print out 5 times "hello" using a while loop.
 
 You should see something like that:
 
@@ -282,13 +301,32 @@ You should see something like that:
   hello
 ````
 
+Solution:
+
+```ruby
+
+counter = 1
+
+while counter < 6
+  puts "hello"
+  counter = counter + 1
+end
+
+
+while counter < 6
+  puts "hello"
+  counter += 1
+end
+
+```
+
 ### Challenge 3
 
 Copy paste this:
 
 ```ruby
-first_name = “john”
-last_name = “lennon”
+first_name = "john"
+last_name = "lennon"
 full_name = ???
 
 puts full_name
@@ -301,13 +339,27 @@ Change the value of full_name to get something like this:
 John LENNON
 ````
 
+Solution:
+
+```ruby
+
+first_name = "john"
+last_name = "lennon"
+full_name = first_name.capitalize + " " + last_name.upcase
+
+full_name2 = "#{first_name.capitalize} #{last_name.upcase}"
+
+puts full_name
+puts full_name2
+```
+
 ### Challenge 4
 
 Copy paste this:
 
 ```ruby
 
-array_of_cities = [“Paris”, “London”, “Melbourne”, “Tokyo”]
+array_of_cities = ["Paris", "London", "Melbourne", "Tokyo"]
 
 ```
 
@@ -325,6 +377,25 @@ Melbourne
 ["Paris", "London", "Tokyo", "Sydney"]
 ````
 
+Solution:
+
+```ruby
+
+array_of_cities = ["Paris", "London", "Melbourne", "Tokyo"]
+
+puts array_of_cities[2]
+array_of_cities.delete("Melbourne")
+p array_of_cities
+array_of_cities.insert(2, "Sydney")
+p array_of_cities
+
+array_of_cities2 = ["Paris", "London", "Melbourne", "Tokyo"]
+
+puts array_of_cities2[2]
+array_of_cities2[2] = "Sydney"
+p array_of_cities2
+```
+
 ### Challenge 5
 
 Copy paste this:
@@ -339,6 +410,21 @@ It will store the current hour in a variable named current_hour. Now create an i
 
 Change the value of current_hour to see if it works.
 
+Solution:
+
+```ruby
+current_hour = Time.now.hour
+
+if current_hour > 12
+  puts "I am hungry!"
+end
+
+
+puts "I am hungry!" if current_hour > 12
+
+
+```
+
 ### Challenge 6
 
 Copy paste this:
@@ -347,7 +433,23 @@ Copy paste this:
 students = ["Julie", "Ben", "Beatrice"]
 ```
 
-Combine a for loop and an if statement inside of the loop to print out every name that starts with a “B”.
+Combine a for loop and an if statement inside of the loop to print out every name that starts with a "B".
+
+Solution:
+
+```ruby
+current_hour = Time.now.hour
+
+if current_hour > 12
+  puts "I am hungry!"
+end
+
+
+puts "I am hungry!" if current_hour > 12
+
+
+```
+
 
 ### Challenge 7
 
