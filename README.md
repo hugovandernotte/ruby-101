@@ -276,11 +276,11 @@ Solution:
 
 #first solution
 
-
 for num in [1,2,3,4,5,6,7,8]
   puts num
 end
 
+#second solution
 
 for num in (1..8).to_a
   puts num
@@ -308,11 +308,14 @@ Solution:
 
 counter = 1
 
+#first solution
+
 while counter < 6
   puts "hello"
   counter = counter + 1
 end
 
+#second solution
 
 while counter < 6
   puts "hello"
@@ -346,12 +349,18 @@ Solution:
 
 first_name = "john"
 last_name = "lennon"
+
+#first solution
+
 full_name = first_name.capitalize + " " + last_name.upcase
 
-full_name2 = "#{first_name.capitalize} #{last_name.upcase}"
+puts full_name
+
+#second solution
+
+full_name = "#{first_name.capitalize} #{last_name.upcase}"
 
 puts full_name
-puts full_name2
 ```
 
 ### Challenge 4
@@ -384,17 +393,21 @@ Solution:
 
 array_of_cities = ["Paris", "London", "Melbourne", "Tokyo"]
 
+#first solution
+
 puts array_of_cities[2]
 array_of_cities.delete("Melbourne")
 p array_of_cities
 array_of_cities.insert(2, "Sydney")
 p array_of_cities
 
-array_of_cities2 = ["Paris", "London", "Melbourne", "Tokyo"]
+#second solution
 
-puts array_of_cities2[2]
-array_of_cities2[2] = "Sydney"
-p array_of_cities2
+array_of_cities = ["Paris", "London", "Melbourne", "Tokyo"]
+
+puts array_of_cities[2]
+array_of_cities[2] = "Sydney"
+p array_of_cities
 ```
 
 ### Challenge 5
@@ -416,10 +429,13 @@ Solution:
 ```ruby
 current_hour = Time.now.hour
 
+#first solution
+
 if current_hour > 12
   puts "I am hungry!"
 end
 
+#second solution
 
 puts "I am hungry!" if current_hour > 12
 
@@ -439,32 +455,37 @@ Combine a for loop and an if statement inside of the loop to print out every nam
 Solution:
 
 ```ruby
-current_hour = Time.now.hour
+students = ["Julie", "Ben", "Beatrice"]
 
-if current_hour > 12
-  puts "I am hungry!"
+#first solution
+
+for student in students
+  if student.include?("B")
+    puts student
+  end
 end
 
+#second solution
 
-puts "I am hungry!" if current_hour > 12
-
+for student in students
+  puts student if student.include?("B")
+end
 
 ```
 
-
 ### Challenge 7
+
+Create a function called only_name_with_first_letter that prints out all students names that start with a specific letter. The function takes two parameters:
+1) An array of students 2) A letter
 
 Copy paste this:
 
 ```ruby
+
 <!-- your code here -->
 
-puts only_name_with_first_letter(["Charly", "Cedric", "Hugo"], "C")
+only_name_with_first_letter(["Charly", "Cedric", "Hugo"], "C")
 ```
-
-Create a function called only_name_with_first_letter that prints out all students names that start with a specific letter. The function takes two parameters:
-1) An array of students 2) A letter
-Copy paste this:
 
 You should see something like this:
 
@@ -473,5 +494,15 @@ Charly
 Cedric
 ````
 
+Solution:
 
+```ruby
 
+def only_name_with_first_letter(names, letter)
+  for name in names
+    puts name if name.include?(letter)
+  end
+end
+
+only_name_with_first_letter(["Charly", "Cedric", "Hugo"], "C")
+```
